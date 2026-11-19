@@ -347,7 +347,7 @@ footer .footer-wordmark {
 
 .page-home #newsletter.cta {
   background: radial-gradient(circle, rgba(255,255,255,.07) 1px, transparent 1.7px) center / 22px 22px repeat,
-    linear-gradient(115deg, #8f1b2a, #006045) !important;
+    linear-gradient(112.28deg, var(--brand-mahogany) 1.41%, #81262b 49.78%, #963a28 73.5%, #a95426 96.26%) !important;
 }
 
 footer .footer-wordmark:has(.footer-lettering) {
