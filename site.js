@@ -140,30 +140,76 @@ const carousel = document.querySelector('.hero-wrap[aria-roledescription="carous
 if (carousel) {
   const slides = [...carousel.querySelectorAll('[data-hero-slide]')];
   const status = carousel.querySelector('[data-hero-status]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const rotationDelay = 8000;
   let currentSlide = 0;
+  let rotationTimer;
+  let userNavigated = false;
+  let pointerInside = false;
+  let focusInside = carousel.contains(document.activeElement);
 
-  function changeSlide(step) {
+  function stepSlide(step, announce = false) {
     const previous = slides[currentSlide];
-    currentSlide = (currentSlide + step + slides.length) % slides.length;
     previous.inert = true;
     previous.setAttribute('aria-hidden', 'true');
 
+    currentSlide = (currentSlide + step + slides.length) % slides.length;
     const active = slides[currentSlide];
     active.inert = false;
     active.removeAttribute('aria-hidden');
-    const title = [...active.querySelectorAll('.slide-heading .hl')].map(line => line.textContent).join(' ');
-    status.textContent = `Slide ${currentSlide + 1} of ${slides.length}: ${title}`;
+
+    if (announce) {
+      const title = [...active.querySelectorAll('.slide-heading .hl')].map(line => line.textContent).join(' ');
+      status.textContent = `Slide ${currentSlide + 1} of ${slides.length}: ${title}`;
+    }
+  }
+
+  function scheduleRotation() {
+    window.clearTimeout(rotationTimer);
+    if (slides.length < 2 || userNavigated || pointerInside || focusInside || document.hidden || reducedMotion.matches) return;
+
+    rotationTimer = window.setTimeout(() => {
+      stepSlide(1);
+      scheduleRotation();
+    }, rotationDelay);
+  }
+
+  function navigateToAdjacentSlide(step) {
+    userNavigated = true;
+    scheduleRotation();
+    stepSlide(step, true);
   }
 
   carousel.querySelectorAll('[data-hero-step]').forEach(button => {
-    button.addEventListener('click', () => changeSlide(Number(button.dataset.heroStep)));
+    button.addEventListener('click', () => navigateToAdjacentSlide(Number(button.dataset.heroStep)));
   });
 
   carousel.addEventListener('keydown', event => {
     if (!event.target.closest('[data-hero-step]')) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
-      changeSlide(event.key === 'ArrowRight' ? 1 : -1);
+      navigateToAdjacentSlide(event.key === 'ArrowRight' ? 1 : -1);
     }
   });
+  carousel.addEventListener('pointerenter', event => {
+    if (event.pointerType !== 'mouse') return;
+    pointerInside = true;
+    scheduleRotation();
+  });
+  carousel.addEventListener('pointerleave', event => {
+    if (event.pointerType !== 'mouse') return;
+    pointerInside = false;
+    scheduleRotation();
+  });
+  carousel.addEventListener('focusin', () => {
+    focusInside = true;
+    scheduleRotation();
+  });
+  carousel.addEventListener('focusout', event => {
+    focusInside = carousel.contains(event.relatedTarget);
+    scheduleRotation();
+  });
+  document.addEventListener('visibilitychange', scheduleRotation);
+  reducedMotion.addEventListener('change', scheduleRotation);
+  scheduleRotation();
 }

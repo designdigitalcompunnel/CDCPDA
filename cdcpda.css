@@ -196,7 +196,7 @@ footer .footer-wordmark {
 
 #hero .hero-photo {
   object-position: left bottom;
-  filter: none;
+  filter: url("#hero-celebration-sharpen") saturate(1.13) brightness(1.025);
 }
 @media (max-width: 1100px) {
   #hero .hero-photo { object-fit: contain; }
@@ -438,13 +438,14 @@ footer .footer-lettering {
 @media (max-width: 640px) {
   .hero-wrap {
     --hero-photo-height: 52.1484vw;
+    --hero-photo-max-height: 55.8105vw;
     --hero-photo-bottom: 20px;
   }
   .hero-wrap:has(#hero-next:not([inert])) {
-    --hero-photo-height: 55.8105vw;
+    --hero-photo-height: var(--hero-photo-max-height);
   }
   .hero-wrap > :is(#hero, #hero-next).hero.slide {
-    padding-bottom: calc(var(--hero-photo-height) + var(--hero-photo-bottom) + 18px) !important;
+    padding-bottom: calc(var(--hero-photo-max-height) + var(--hero-photo-bottom) + 18px) !important;
   }
   :is(#hero, #hero-next) .hero-photo {
     inset: auto 0 var(--hero-photo-bottom);

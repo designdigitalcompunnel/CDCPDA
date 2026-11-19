@@ -1407,6 +1407,13 @@ footer > .container { position: relative !important; z-index: 1 !important; }
 </div>
 </header>
 <main id="top" tabindex="-1">
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <filter id="hero-celebration-sharpen" color-interpolation-filters="sRGB">
+      <feConvolveMatrix order="3" kernelMatrix="0 -.09 0 -.09 1.36 -.09 0 -.09 0" edgeMode="duplicate" preserveAlpha="true"></feConvolveMatrix>
+    </filter>
+  </defs>
+</svg>
 <div class="hero-wrap" role="region" aria-roledescription="carousel" aria-label="Homepage highlights">
 <section aria-labelledby="hero-title" class="hero slide hero-navy" id="hero" data-hero-slide="" aria-roledescription="slide"><img class="hero-photo" src="assets/central-district-celebration.webp" alt="" aria-hidden="true" width="2048" height="1068" fetchpriority="high" decoding="async"><div class="container">
 <span class="eyebrow">Seattle’s Central District</span>
@@ -1428,7 +1435,8 @@ footer > .container { position: relative !important; z-index: 1 !important; }
 </div>
 </div>
 </section>
-<div class="hero-controls"><div class="container hc-grid"><div class="hc-buttons" role="group" aria-label="Carousel controls">
+<div class="hero-controls">
+<div class="container hc-grid"><div class="hc-buttons" role="group" aria-label="Carousel controls">
   <button class="hero-btn" type="button" data-hero-step="-1" aria-label="Previous slide"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"></path></svg></button>
   <button class="hero-btn" type="button" data-hero-step="1" aria-label="Next slide"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 6 6 6-6 6"></path></svg></button>
   <span class="sr-only" role="status" data-hero-status></span></div></div></div></div>
