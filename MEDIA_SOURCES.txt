@@ -1,0 +1,48 @@
+CDCPDA website redesign concept
+
+Brand and content sources
+Official website: https://centraldistrictcpda.org/
+RFP: https://centraldistrictcpda.org/wp-content/uploads/2026/11/Vendor-form.pdf
+Logo: https://centraldistrictcpda.org/wp-content/uploads/2022/09/CDCPDA_Logo_Horizontal_WarmWhite_WEB.png
+Site icon: https://centraldistrictcpda.org/wp-content/uploads/2025/02/cropped-favicon.png
+The supplied template includes the Compunnel Digital footer credit.
+
+Homepage hero photo
+central-district-celebration.webp: User-supplied Adobe Stock image, asset 750255172.
+Converted to WebP. The site displays the full frame on narrow screens.
+
+Second homepage hero photo
+mckinney-audience-hero.webp: User-supplied Adobe Stock photograph, asset 2209502708.
+Converted to WebP. The site displays the full frame on narrow screens.
+
+Rent Space hero photo
+rental-hero.webp: User-supplied Adobe Stock image, asset 742982962.
+Converted to WebP for the hero background.
+
+Pexels stock media: https://www.pexels.com/license/
+Other stock visuals illustrate activities and venue setups.
+
+board-materials.webp: https://www.pexels.com/photo/9034222/
+boardroom.webp: https://www.pexels.com/photo/1181304/
+classroom.webp: https://www.pexels.com/photo/8761301/
+committee-meeting.webp: https://www.pexels.com/photo/3184302/
+community-class.webp: https://www.pexels.com/photo/1181622/
+community-gathering.webp: https://www.pexels.com/photo/3866369/
+community-partners.webp: https://www.pexels.com/photo/5710191/
+gathering-hall.webp: https://www.pexels.com/photo/37012314/
+making-workshop.webp: https://www.pexels.com/photo/9242850/
+partners-at-work.webp: https://www.pexels.com/photo/7841783/
+planning-session.webp: https://www.pexels.com/photo/3184339/
+public-documents.webp: https://www.pexels.com/photo/3183153/
+roundtable.webp: https://www.pexels.com/photo/3931436/
+seminar-room.webp: https://www.pexels.com/photo/34476625/
+team-briefing.webp: https://www.pexels.com/photo/3184357/
+working-session.webp: https://www.pexels.com/photo/group-of-people-sitting-on-chair-5710927/
+community-event.webp: https://www.pexels.com/photo/group-of-people-beside-table-1181433/
+seminar-layout.webp: https://www.pexels.com/photo/empty-concert-hall-with-rows-of-chairs-5026349/
+reception-discussion.webp: https://www.pexels.com/photo/3184325/
+focus-community-space.webp: https://www.pexels.com/photo/3184398/
+focus-cultural-preservation.webp: https://www.pexels.com/photo/glass-door-entrance-with-white-wooden-frame-9554712/
+focus-economic-development.webp: https://www.pexels.com/photo/3184338/
+center-visit.webp: https://www.pexels.com/photo/1181519/
+rental-intro.webp: https://www.pexels.com/photo/modern-office-conference-room-with-empty-chairs-36755512/
